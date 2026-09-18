@@ -14,9 +14,9 @@ summaryLength = 20
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
 ignoreErrors = ["error-remote-getjson"]
 
-timeout = "180s"
+timeout = "600s"
 
-languageCode = "en-us"
+languageCode = "en-gb"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
@@ -28,18 +28,6 @@ defaultContentLanguageInSubdir = false
     notAlternative = true
     permalinkable = true
     root = true
-  [outputFormats.netlify]
-    mediaType = "application/toml"
-    baseName = "netlify"
-    isPlainText = true
-    notAlternative = true
-    permalinkable = true
-    root = true
-  [outputFormats.REDIR]
-    mediaType = "text/netlify"
-    baseName = "_redirects"
-    isPlainText = true
-    notAlternative = true
   [outputFormats.XML]
     isPlainText = false
     mediaType = "application/xml"
@@ -52,7 +40,7 @@ defaultContentLanguageInSubdir = false
 delimiter = ""
 
 [outputs]
-home = ["HTML", "RSS", "REDIR", "netlify", "server"]
+home = ["HTML", "RSS", "server"]
 
 [build]
   writeStats = true
@@ -93,6 +81,8 @@ home = ["HTML", "RSS", "REDIR", "netlify", "server"]
   [minify.tdewolff.js]
     precision = 0
     version = 2022
+    keepVarNames = true
+    keepWhitespace = true
   [minify.tdewolff.html]
     keepWhitespace = true
 
@@ -130,4 +120,4 @@ home = ["HTML", "RSS", "REDIR", "netlify", "server"]
   [segments.headers]
     [[segments.headers.includes]]
        kind = '{home}'
-       output = '{netlify,server}'
+       output = '{server}'
