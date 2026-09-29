@@ -38,7 +38,8 @@
 
 [navigation]
     anchor = true
-    logo = "/img/logos/ceda-logo-light.png"
+    logo = "img/logos/ceda-logo.png"
+    logo-mode = true
     color = "body-tertiary"
     fixed = true
     overlay = false #
@@ -153,9 +154,9 @@
     nceo = "https://www.nceo.ac.uk"
     ncas = "https://www.ncas.ac.uk"
     jasmin = "https://www.jasmin.ac.uk"
-    stfc = "https://stfc.ukri.org"
-    nerc = "https://nerc.ukri.org"
-    ukri = "https://ukri.org"
+    stfc = "https://www.ukri.org/councils/stfc/"
+    nerc = "https://www.ukri.org/councils/nerc/"
+    ukri = "https://www.ukri.org"
 
 [statusClasses]
     "down" = "danger"
